@@ -28,8 +28,8 @@ class GlXHomeManagerController extends GlXMainController {
 	 * @return void
 	 */
 	public function loadCustomCssJs() {
-		$this->addCss($this->GlX->config['cssUrl'] . 'mgr/main.css');
-		$this->addCss($this->GlX->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
+		//$this->addCss($this->GlX->config['cssUrl'] . 'mgr/main.css');
+		//$this->addCss($this->GlX->config['cssUrl'] . 'mgr/bootstrap.buttons.css');
 		$this->addJavascript($this->GlX->config['jsUrl'] . 'mgr/misc/utils.js');
 		$this->addJavascript($this->GlX->config['jsUrl'] . 'mgr/widgets/items.grid.js');
 		$this->addJavascript($this->GlX->config['jsUrl'] . 'mgr/widgets/items.windows.js');

@@ -16,14 +16,14 @@ abstract class GlXMainController extends modExtraManagerController {
 		require_once $corePath . 'model/glx/glx.class.php';
 
 		$this->GlX = new GlX($this->modx);
-		//$this->addCss($this->GlX->config['cssUrl'] . 'mgr/main.css');
+		$this->addCss($this->GlX->config['cssUrl'] . 'mgr/main.css');
 		$this->addJavascript($this->GlX->config['jsUrl'] . 'mgr/glx.js');
-		$this->addHtml('
-		<script type="text/javascript">
+		$this->addHtml('<script type="text/javascript">
+		Ext.onReady(function() {
 			GlX.config = ' . $this->modx->toJSON($this->GlX->config) . ';
 			GlX.config.connector_url = "' . $this->GlX->config['connectorUrl'] . '";
-		</script>
-		');
+		});
+		</script>');
 
 		parent::initialize();
 	}

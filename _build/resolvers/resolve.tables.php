@@ -11,7 +11,12 @@ if ($object->xpdo) {
             $modx->addPackage('glx', $modelPath);
 
             $manager = $modx->getManager();
-            $objects = array();
+            $objects = array(
+                'glxCity'
+                ,'glxCommonField'
+                ,'glxCommonFieldValue'
+                ,'glxExtraField'
+            );
             $schemaFile = MODX_CORE_PATH . 'components/glx/model/schema/glx.mysql.schema.xml';
             if (is_file($schemaFile)) {
                 $schema = new SimpleXMLElement($schemaFile, 0, true);
